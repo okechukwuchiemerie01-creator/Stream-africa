@@ -1,0 +1,82 @@
+:root{
+  --bg: #061a18;
+  --card: rgba(10, 40, 38, 0.75);
+  --accent: #4fd1c5;
+  --accent-dark: #2fb8a6;
+  --text: #ecfffb;
+  --muted: #9fcfc6;
+  --input-bg: rgba(255,255,255,0.04);
+}
+
+body{
+  margin:0;
+  padding:24px;
+  font-family:'Poppins',sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(79,209,197,0.15), transparent 60%),
+    linear-gradient(135deg, #041412, #0b2f2a);
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:var(--text);
+}
+
+.container{
+  background:rgba(0,0,0,0.55);
+  border-radius:16px;
+  padding:2rem;
+  width:100%;
+  max-width:420px;
+}
+
+.logo{
+  width:120px;
+  margin-bottom:10px;
+}
+
+label{
+  font-weight:600;
+  display:block;
+  margin-bottom:6px;
+}
+
+.input-group{
+  margin-bottom:1rem;
+  position:relative;
+}
+
+input{
+  width:100%;
+  padding:0.75rem;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.05);
+  background:var(--input-bg);
+  color:var(--text);
+}
+
+.toggle{
+  position:absolute;
+  right:10px;
+  top:50%;
+  transform:translateY(-50%);
+  cursor:pointer;
+}
+
+button{
+  width:100%;
+  padding:0.85rem;
+  border:none;
+  border-radius:10px;
+  background:linear-gradient(90deg,var(--accent),var(--accent-dark));
+  color:#fff;
+  font-weight:700;
+  cursor:pointer;
+}
+
+.note{
+  text-align:center;
+  font-size:0.85rem;
+  margin-top:1rem;
+  color:var(--muted);
+}

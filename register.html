@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stream Registration</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+  <div class="container">
+    <img src="assets/logo.png" class="logo" />
+    <div class="brand-name"></div>
+    <h2>Create Your Account</h2>
+    <form id="registrationForm">
+      <label>Full Name</label>
+      <div class="input-group">
+        <input type="text" id="name" placeholder="Your full name">
+        <div class="error-message" id="errName">Enter your full name</div>
+      </div>
+      <label>Username</label>
+      <div class="input-group">
+        <input type="text" id="username" placeholder="Choose a username">
+        <div class="error-message" id="errUser">Enter a username</div>
+      </div>
+      <label>Phone Number</label>
+      <div class="input-group">
+        <input type="text" id="phone" placeholder="08012345678">
+        <div class="error-message" id="errPhone">Enter a valid phone number</div>
+      </div>
+      <label>Email Address</label>
+      <div class="input-group">
+        <input type="email" id="email" placeholder="you@email.com">
+        <div class="error-message" id="errEmail">Enter a valid email</div>
+      </div>
+      <label>Password</label>
+      <div class="input-group">
+        <input type="password" id="password" placeholder="Create a password">
+        <div class="toggle-icon" id="togglePass"><i class="fa-solid fa-eye-slash"></i></div>
+        <div class="error-message" id="errPass">Password must be 6+ characters</div>
+      </div>
+      <label for="plan">Select Plan</label>
+      <div class="input-group">
+        <select id="plan">
+          <option value="12000">Stream Premium  – ₦12,500</option>
+        </select>
+      </div>
+      <div class="plan">
+        <h3>Premium Plan – ₦12,500</h3>
+        <p><del>₦18,000</del><span> &nbsp; Save ₦6,500</span></p>
+      </div>
+      <button type="submit" class="primary">Sign Up</button>
+    </form>
+    <div class="note">Secure registration | Secure payment</div>
+    <div class="note" style="margin-top: 1.2rem;">
+      Already have an account?
+      <a href="login.html">Login</a>
+    </div>
+  </div>
+  <script src="js/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/login.css">
+
+</head>
+<body>
+
+<div class="container">
+  <img src="assets/logo.png" class="logo" alt="Stream Logo">
+  <h2>Login</h2>
+
+  <label>Email or Username</label>
+  <div class="input-group">
+    <input type="text" placeholder="Enter email or username">
+  </div>
+
+  <label>Password</label>
+  <div class="input-group">
+    <input type="password" id="pass" placeholder="Enter password">
+    <span class="toggle" onclick="togglePass()">
+      <i class="fa-solid fa-eye"></i>
+    </span>
+  </div>
+
+  <button onclick="login()">Login</button>
+
+  <div class="note">
+    No account? <a href="register.html" style="color:var(--accent)">Register</a>
+  </div>
+</div>
+
+<script src="js/login.js"></script>
+
+</body>
+</html>

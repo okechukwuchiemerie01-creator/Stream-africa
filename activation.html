@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stream | Secure Payment</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/activation.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <div class="secure-badge"><i class="fa-solid fa-shield-halved"></i> Secure Payment</div>
+    <h2 style="margin: 5px 0;">Complete Payment</h2>
+    <p style="font-size: 14px; opacity: 0.9;">To activate your account, kindly make a transfer of exactly ₦12,500 to the account below</p>
+  </div>
+
+  <div class="timer-card">
+    <div class="timer-label">Awaiting Payment Confirmation</div>
+    <div id="countdown" class="timer-display">10:00</div>
+  </div>
+
+<div class="opay-warning">
+  <strong><i class="fa-solid fa-triangle-exclamation"></i> Important:</strong> 
+  We accept payments from <b>all banks</b> for instant activation.
+</div>
+
+  <div class="account-card">
+    <div class="bank-name">Bank Name - KUDA MFB</div>
+    <div class="acc-number-wrap">
+      <span class="acc-number" id="acc_no">2085026663</span>
+      <i class="fa-solid fa-copy copy-icon" onclick="copyText('acc_no')"></i>
+    </div>
+    <div class="acc-holder">SOPHIA OKARFOR</div>
+    <div style="font-size: 11px; margin-top: 5px; color: #666;">STREAM OPERATING ACCOUNT </div>
+  </div>
+
+  <div class="button-group">
+  <a href="https://wa.link/an8pde" 
+     class="btn-confirm btn-whatsapp">
+    <i class="fa-brands fa-whatsapp"></i> CONFIRM ON WHATSAPP
+  </a>
+</div>
+
+  <p style="text-align: center; font-size: 12px; opacity: 0.5; margin-top: 20px;">
+    Your account will be activated immediately after Payment proof is received.
+  </p>
+</div>
+
+<div id="toast">Account Number Copied!</div>
+  <div class="modal-overlay" id="warningModal">
+    <div class="modal-content">
+        <div class="modal-icon">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+        </div>
+        <h2 class="modal-title">PAYMENT NOTICE</h2>
+        <div class="modal-body">
+            <p><strong>WE ACCEPT PAYMENTS FROM ALL BANKS INCLUDING OPAY.</strong></p>
+            <br>
+            <p>All payments are processed instantly for quick activation and smooth transactions.</p>
+        </div>
+        <button class="modal-btn" onclick="closeModal()">I UNDERSTAND & PROCEED</button>
+    </div>
+</div>
+
+<script src="js/activation.js"></script>
+</body>
+</html>

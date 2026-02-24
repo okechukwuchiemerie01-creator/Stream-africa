@@ -1,0 +1,20 @@
+{
+  "name": "Stream Africa",
+  "short_name": "Stream",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#013740",
+  "theme_color": "#013740",
+  "icons": [
+    {
+      "src": "favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

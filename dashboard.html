@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stream Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <img src="assets/logo.png" alt="Stream Logo" class="stream-logo">
+    <div class="support-icon" onclick="openSupportChat()">
+      <i class="fa-solid fa-headset"></i>
+    </div>
+  </div>
+
+  <div class="dashboard-profile">
+    <div class="welcome-msg">
+      <h2 id="greeting">Good Morning</h2>
+      <p id="user-display-name">Rapheal</p>
+    </div>
+    <div class="user-meta">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="avatar">
+      <span class="status-inactive" onclick="openModal()">Inactive</span>
+    </div>
+  </div>
+
+  <div class="wallet-stack">
+    <div class="wallet-card c-collab">
+      <span class="card-title">Collab Earnings</span>
+      <span class="card-val balance-text" data-value="₦3,000">₦3,000</span>
+    </div>
+    <div class="wallet-card c-partner">
+      <span class="card-title">Partner Earnings</span>
+      <span class="card-val balance-text" data-value="₦4,000">₦4,000</span>
+    </div>
+    <div class="wallet-card c-main">
+      <span class="card-title">Total Royalties</span>
+      <div class="main-balance-row">
+        <span class="main-val balance-text" data-value="₦12,000">₦12,500</span>
+        <i class="fa-regular fa-eye eye-toggle" id="toggleEye"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="activation-alert">
+    <p class="alert-text">Your account is currently inactive. Activate your account to unlock all features and start your journey with Stream Africa.</p>
+    <button class="alert-btn" onclick="openModal()">Click here to activate your account →</button>
+  </div>
+
+  <div class="actions-grid">
+    <div class="action-item" onclick="openModal()"><i class="fa-solid fa-star"></i><p>Wish Hub</p></div>
+    <div class="action-item" onclick="openModal()"><i class="fa-solid fa-store"></i><p>Bazaar</p></div>
+    <div class="action-item" onclick="openModal()"><i class="fa-solid fa-hand-point-up"></i><p>Earn</p></div>
+    <div class="action-item" onclick="openModal()"><i class="fa-solid fa-video"></i><p>Video</p></div>
+    <div class="action-item" onclick="openModal()"><i class="fa-solid fa-microphone"></i><p>Audio</p></div>
+    <div class="action-item" onclick="openModal()"><i class="fa-solid fa-file-arrow-down"></i><p>Files</p></div>
+  </div>
+</div>
+
+<div class="bottom-nav">
+  <a href="#" class="nav-item"><i class="fa-solid fa-house"></i><br>Home</a>
+  <a href="#" class="nav-item" onclick="openHistory()"><i class="fa-solid fa-clock-rotate-left"></i><br>History</a>
+  <a href="#" class="nav-item"><i class="fa-solid fa-graduation-cap"></i><br>Skill Up</a>
+  <a href="#" class="nav-item active"><i class="fa-solid fa-user"></i><br>Profile</a>
+</div>
+
+<div id="activationModal" class="modal-bg">
+  <div class="modal-box fortune-style">
+    <span class="close-btn" onclick="closeModal()" style="position:absolute; top:15px; right:20px; color:#5d140b; cursor:pointer; font-size:20px;">✕</span>
+    <i class="fa-solid fa-bell" style="font-size:32px; color:#5d140b;"></i>
+    <h3>Notification</h3>
+    <p style="color:#1a1a1a; font-weight:500; font-size:17px; margin:20px 0;">Hello! You’re yet to activate your Stream account. Please proceed to activate your account to access your bonus and other features.</p>
+    <button class="activate-btn fortune-btn" onclick="window.location.href='activation.html'">Click Here To Activate Account</button>
+  </div>
+</div>
+
+<div id="historyModal" class="modal-bg">
+  <div class="modal-box" style="background: #fff; width: 85%; border-radius: 20px;">
+    <div style="display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #eee; padding-bottom:10px;">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <i class="fa-solid fa-clock-rotate-left" style="font-size:24px; color: #1e3a34;"></i>
+        <h3 style="margin:0; color: #1e3a34;">Recent Activity</h3>
+      </div>
+      <span onclick="closeHistory()" style="cursor:pointer; font-size:20px; font-weight:bold;">✕</span>
+    </div>
+    <div style="margin-top:15px;">
+      <div style="padding:12px 0; border-bottom:1px solid #ddd; display:flex; gap:10px; align-items:flex-start;">
+        <i class="fa-solid fa-user-check" style="font-size:20px; color: #1e3a34;"></i>
+        <div><strong style="color: black;">Account Registration</strong><br><small style="color: black;">You successfully registered</small></div>
+      </div>
+      <div style="padding:12px 0; border-bottom:1px solid #ddd; display:flex; gap:10px; align-items:flex-start;">
+        <i class="fa-solid fa-gift" style="font-size:20px; color:#1e3a34;"></i>
+        <div><strong style="color: black;">Welcome Bonus</strong><br><small style="color: black;">You received ₦12,500 Stream Cashback</small></div>
+      </div>
+      <div style="padding:12px 0; display:flex; gap:10px; align-items:flex-start;">
+        <i class="fa-solid fa-lock" style="font-size:20px; color:#1e3a34;"></i>
+        <div><strong style="color: black;">Activation Pending</strong><br><small style="color: #1e3a34;">Complete your payment</small></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="dynamicNotif" class="stream-notification" onclick="openModal()">
+  <div class="live-tag">LIVE</div>
+  <div id="notifMedia" style="width:50px; height:50px; border-radius:50%; overflow:hidden; margin-right:12px; border:2px solid #f4a622; flex-shrink:0;"></div>
+  <div style="flex-grow:1;">
+    <strong id="notifName" style="color:#0b1a16; font-size:15px;">Peller</strong>
+    <p id="notifText" style="color:#444; font-size:12px; margin:0;">Loading...</p>
+  </div>
+  <div style="background:#1e3a34; color:white; padding:6px 15px; border-radius:8px; font-size:12px; font-weight:bold;">JOIN</div>
+</div>
+
+<script src="js/dashboard.js"></script>
+</body>
+</html>
