@@ -29,5 +29,5 @@ document.getElementById("registrationForm").onsubmit = function(e) {
   else document.getElementById("errPass").style.display = "none";
   if (!valid) return;
   localStorage.setItem("userFullName", name);
-  window.location.href = "Dashboard.html";
+  window.location.href = "dashboard.html";
 }
