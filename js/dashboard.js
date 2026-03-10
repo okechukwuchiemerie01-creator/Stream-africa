@@ -45,3 +45,4 @@ function showNextNotification() {
 }
 setTimeout(showNextNotification, 2000);
 setInterval(showNextNotification, 14000);
+
